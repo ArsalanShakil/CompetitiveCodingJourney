@@ -186,6 +186,81 @@ def dynamicArray(n, queries):
     return answers
 
 
+def rotateLeft(d, arr):
+    return arr[d:] + arr[:d]
+
+
+def rotatedLeft(d, arr):
+    size = len(arr)
+    rotated_arr = [] * size
+    i = 0
+    rotate_index = d
+
+    while rotate_index < size:
+        rotated_arr[i] = arr[rotate_index]
+        i += 1
+        rotate_index += 1
+
+    rotate_index = 0
+    while rotate_index < d:
+        rotated_arr[i] = arr[rotate_index]
+        i += 1
+        rotate_index += 1
+
+    return rotated_arr
+
+
+# Medium
+def matchingStrings(strings, queries):
+    count = 0
+    arr = [0] * len(queries)
+    for i in range(len(queries)):
+        count = strings.count(queries[i])
+        arr[i] = count
+    return arr
+
+
+# Long version
+def matchingStringsx(strings, queries):
+    count = 0
+    arr = [0] * len(queries)
+    for i in range(len(queries)):
+        count = 0
+        for j in range(len(strings)):
+            if queries[i] == strings[j]:
+                count += 1
+        arr[i] = count
+    return arr
+
+
+# Hard
+# Short version
+def arrayManipulation(n, queries):
+    base_arr = [0] * (n + 2)
+    max_num = temp = 0
+    for a, b, k in queries:
+        base_arr[a] += k
+        base_arr[b + 1] -= k
+    for x in base_arr:
+        temp += x
+        max_num = max(max_num, temp)
+    return max_num
+
+
+def testSlice():
+    st = "test"
+    return st[2:] + st[:2]
+
+
+def testArray():
+    st = [[1, 5, 3], [4, 8, 7], [6, 9, 1]]
+    for a, b, k in st:
+        print(f"a{a}")
+        print(f'b{b}')
+        print(f'k{k}')
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    testArray()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
