@@ -367,6 +367,67 @@ def compare_lists(llist1, llist2):
         return 0
 
 
+# import sys
+# sys.setrecursionlimit(10000)
+# Recursion
+def mergeLists(head1, head2):
+    if head1 == None and head2 == None:
+        return None
+
+    if head1 == None:
+        return head2
+    if head2 == None:
+        return head1
+
+    if head1.data < head2.data:
+        temp = head1
+        temp.next = mergeLists(head1.next, head2)
+
+    else:
+        temp = head2
+        temp.next = mergeLists(head1, head2.next)
+
+    return temp
+
+
+# Without recursion but might have some faults
+def mergeLists(head1, head2):
+    if head1 is None and head2 is None:
+        return None
+
+    if head1 is None:
+        return head2
+    if head2 is None:
+        return head1
+
+    head3 = None
+    if head1.data < head2.data:
+        head3 = head1
+        head1 = head1.next
+    else:
+        head3 = head1
+        head1 = head1.next
+
+    current_node = head3
+
+    while head1 is not None and head2 is not None:
+        if head1.data < head2.data:
+            current_node.next = head1
+            head1 = head1.next
+        else:
+            current_node.next = head2
+            head2 = head2.next
+
+        current_node = current_node.next
+
+    if head1 is None:
+        current_node.next = head2
+    else:
+        current_node.next = head1
+
+    return head3
+
+
 def testSlice():
     st = "test"
     return st[2:] + st[:2]
