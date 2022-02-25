@@ -247,6 +247,126 @@ def arrayManipulation(n, queries):
     return max_num
 
 
+def printLinkedList(head):
+    if head is None:
+        return
+
+    while head is not None:
+        print(head.data)
+        head = head.next
+
+    return
+
+
+def insertNodeAtTail(head, data):
+    # new_node = SinglyLinkedListNode(data)
+    new_node = data
+    current = head
+    if head is None:
+        head = new_node
+        return head
+
+    while current.next is not None:
+        current = current.next
+
+    current.next = new_node
+    return head
+
+
+def insertNodeAtHead(llist, data):
+    # new_node = SinglyLinkedListNode(data)
+    new_node = data
+    current = llist
+    if llist is None:
+        llist = new_node
+        return llist
+
+    llist = new_node
+    llist.next = current
+
+    return llist
+
+
+# Short version
+def insertNodeAtHeadShort(llist, data):
+    # new_node = SinglyLinkedListNode(data)
+    new_node = data
+    current = llist
+    if llist is None:
+        llist = new_node
+        return llist
+
+    new_node.next = llist
+    return new_node
+
+
+def insertNodeAtPosition(llist, data, position):
+    # new_node = SinglyLinkedListNode(data)
+    new_node = data
+    current_node = llist
+    index = 0
+
+    while index < position - 1:
+        current_node = current_node.next
+        index += 1
+
+    new_node.next = current_node.next
+    current_node.next = new_node
+
+    return llist
+
+
+def deleteNode(llist, position):
+    index = 0
+    current_node = llist
+    if llist is None:
+        return llist
+    if position == 0:
+        return llist.next
+
+    while index < position - 1:
+        current_node = current_node.next
+        index += 1
+
+    current_node.next = current_node.next.next
+    return llist
+
+
+def reversePrint(llist):
+    if llist is None:
+        return
+
+    reversePrint(llist.next)
+    print(llist.data)
+
+
+def reverseLinkedList(head):
+    current = head
+    prev = None
+    next = head.next
+
+    while current is not None:
+        next = current.next
+        current.next = prev
+        prev = current
+        current = next
+    head = prev
+    return head
+
+
+def compare_lists(llist1, llist2):
+    while llist1 and llist2:
+        if llist1.data == llist2.data:
+            llist1 = llist1.next
+            llist2 = llist2.next
+        else:
+            return 0
+    if llist1 is None and llist2 is None:
+        return 1
+    else:
+        return 0
+
+
 def testSlice():
     st = "test"
     return st[2:] + st[:2]
