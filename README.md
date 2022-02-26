@@ -9,3 +9,11 @@ https://www.youtube.com/watch?v=tWVWeAqZ0WU
 
 ### Competitive Programming Handbook
 https://cses.fi/book/book.pdf
+
+### HackerRank Solutions 
+
+#### Nick White
+https://www.youtube.com/watch?v=ef0ts1cVWYc&list=PLU_sdQYzUj2nKXYskiYlKQIKknqu4H5ti
+
+#### Hacker Realm
+https://www.youtube.com/watch?v=CNs6M4fXBwA&list=PL_8jNcohs27XQfEmWAHCgLFqpsNaWxUSe
