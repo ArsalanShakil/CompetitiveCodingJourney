@@ -6,3 +6,6 @@
 
 ### Graph Theory
 https://www.youtube.com/watch?v=tWVWeAqZ0WU
+
+### Competitive Programming Handbook
+https://cses.fi/book/book.pdf
