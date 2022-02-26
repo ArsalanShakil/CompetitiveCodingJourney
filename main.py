@@ -505,11 +505,51 @@ def findMergeNode(head1, head2):
     return head1_current.data
 
 
+# Doubly linked list
+def sortedInsert(llist, data):
+    # node = DoublyLinkedListNode(data)
+
+    node = data
+    if llist is None:
+        llist = node
+
+    elif data < llist.data:
+        node.next = llist
+        llist.prev = node
+        llist = node
+
+    else:
+        current = llist
+        while current.next != None and current.data < data:
+            current = current.next
+
+        if current.next == None and current.data < data:
+            current.next = node
+            node.prev = current
+        else:
+            node_previous = current.prev
+            node_previous.next = node
+            node.prev = node_previous
+            node.next = current
+            current.prev = node
+    return llist
 
 
+# Doubly linked list
+def reverse(llist):
+    if llist is None: return llist
 
+    current = llist
+    new_head = llist
 
+    while current is not None:
+        prev = current.prev
+        current.prev = current.next
+        current.next = prev
+        new_head = current
+        current = current.prev
 
+    return new_head
 
 
 
