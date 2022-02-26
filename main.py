@@ -428,6 +428,78 @@ def mergeLists(head1, head2):
     return head3
 
 
+# Might not work
+def getNode(llist, positionFromTail):
+    pointer_node = llist
+    count = 0
+
+    while llist != None:
+        llist = llist.next
+        if count < positionFromTail:
+            count += 1
+        else:
+            pointer_node = pointer_node.next
+
+    return pointer_node.data
+
+
+# This one works
+def getNode(llist, positionFromTail):
+    pointer1 = llist
+    pointer2 = llist
+
+    for i in range(positionFromTail):
+        pointer1 = pointer1.next
+
+    while pointer1.next != None:
+        pointer1 = pointer1.next
+        pointer2 = pointer2.next
+    return pointer2.data
+
+
+def removeDuplicates(llist):
+    if llist is None:
+        llist
+
+    new_head = llist
+
+    while new_head.next != None:
+        if new_head.data == new_head.next.data:
+            new_head.next = new_head.next.next
+        else:
+            new_head = new_head.next
+
+    return llist
+
+
+def has_cycle(head):
+    if head is None: return False
+
+    fast = head.next
+    slow = head
+
+    while fast != None and fast.next != None and slow != None:
+        if fast == slow:
+            return 1
+        else:
+            fast = fast.next.next
+            slow = slow.next
+    return False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def testSlice():
     st = "test"
     return st[2:] + st[:2]
@@ -441,7 +513,14 @@ def testArray():
         print(f'k{k}')
 
 
+def dataTest():
+    lulli = 5
+    lulli = "-@"
+
+    print(lulli)
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    testArray()
+    dataTest()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
