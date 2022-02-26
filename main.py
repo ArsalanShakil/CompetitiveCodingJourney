@@ -487,6 +487,23 @@ def has_cycle(head):
     return False
 
 
+def findMergeNode(head1, head2):
+    head1_current = head1
+    head2_current = head2
+
+    while head1_current != head2_current:
+        if head1_current.next == None:
+            head1_current = head2
+        else:
+            head1_current = head1_current.next
+
+        if head2_current.next == None:
+            head2_current = head1
+        else:
+            head2_current = head2_current.next
+
+    return head1_current.data
+
 
 
 
