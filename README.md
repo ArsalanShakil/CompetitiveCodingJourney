@@ -41,3 +41,12 @@ https://docs.google.com/spreadsheets/d/11tevcTIBQsIvRKIZLbSzCeN4mCO6wD4O5meyrAIf
 
 #### Leetcode DSA sheet
 https://docs.google.com/spreadsheets/d/1-wKcV99KtO91dXdPkwmXGTdtyxAfk1mbPXQg81R9sFE/edit#gid=0
+
+#### Top Coding Interview Problems
+https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
+
+#### Question list for DSA
+https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view
+
+#### mycodeschool
+https://www.youtube.com/user/mycodeschool/playlists
