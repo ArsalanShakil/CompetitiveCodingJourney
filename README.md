@@ -32,3 +32,12 @@ https://www.youtube.com/c/NeetCode/playlists
 
 #### CodeHelp
 https://www.youtube.com/c/CodeHelpbyBabbar/playlists
+
+#### take U forward
+https://www.youtube.com/c/takeUforward/playlists
+
+#### DSA Day-wise
+https://docs.google.com/spreadsheets/d/11tevcTIBQsIvRKIZLbSzCeN4mCO6wD4O5meyrAIfSXw/edit#gid=136755630
+
+#### Leetcode DSA sheet
+https://docs.google.com/spreadsheets/d/1-wKcV99KtO91dXdPkwmXGTdtyxAfk1mbPXQg81R9sFE/edit#gid=0
