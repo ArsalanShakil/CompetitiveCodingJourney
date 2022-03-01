@@ -50,3 +50,8 @@ https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view
 
 #### mycodeschool
 https://www.youtube.com/user/mycodeschool/playlists
+
+<a href="https://whimsical.com/computer-programming-W5fHQ2rpXWUiJcHSuW6KRe"><img align="center" width="50%" alt="CS 101" src='https://user-images.githubusercontent.com/40695548/156150576-4eb107ad-bff4-4c60-a2ee-15912fbcb774.png'/>
+</a>
+
+
