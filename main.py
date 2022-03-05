@@ -247,6 +247,7 @@ def arrayManipulation(n, queries):
     return max_num
 
 
+# SINGLY LINKED LIST
 def printLinkedList(head):
     if head is None:
         return
@@ -552,6 +553,7 @@ def reverse(llist):
     return new_head
 
 
+# TREES
 def preOrder(root):
     if root is None:
         return
@@ -602,6 +604,15 @@ def topView(root):
         print(dict[height][0], end=' ')
 
 
+# Test code
+def testDict():
+    dict = {}
+    for i in range(3):
+        dict[i] = [f"hello->{i}", f"i->{i}"]
+
+    print(dict)
+
+
 def testSlice():
     st = "test"
     return st[2:] + st[:2]
@@ -637,5 +648,5 @@ def isEven():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    isEven()
+    testDict()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
