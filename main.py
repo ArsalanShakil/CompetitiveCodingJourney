@@ -552,9 +552,54 @@ def reverse(llist):
     return new_head
 
 
+def preOrder(root):
+    if root is None:
+        return
+    else:
+        print(root, end=" ")
+        preOrder(root.left)
+        preOrder(root.right)
 
 
+def postOrder(root):
+    if root is None:
+        return
+    postOrder(root.left)
+    postOrder(root.right)
+    print(root, end=" ")
 
+
+def inOrder(root):
+    if root is None:
+        return
+    inOrder(root.left)
+    print(root, end=" ")
+    inOrder(root.right)
+
+
+def height(root):
+    if root is None:
+        return -1
+    else:
+        return 1 + max(height(root.left), height(root.right))
+
+
+def topView(root):
+    dict = {}
+
+    def traverse(root, height, level):
+        if root:
+            if height not in dict:
+                dict[height] = [root, level]
+            elif dict[height][1] > level:
+                dict[height] = [root, level]
+            traverse(root.left, height - 1, level + 1)
+            traverse(root.right, height + 1, level + 1)
+
+    traverse(root, 0, 0)
+
+    for height in sorted(dict):
+        print(dict[height][0], end=' ')
 
 
 def testSlice():
@@ -571,13 +616,26 @@ def testArray():
 
 
 def dataTest():
-    lulli = 5
-    lulli = "-@"
+    y = 15
+    x = 3
+    z = 6
+    if y > x and y > z:
+        print(y)
+    elif x > y and x > z:
+        print(x)
+    else:
+        print(z)
 
-    print(lulli)
+
+def isEven():
+    x = 51
+    if x % 2 == 0:
+        print(True)
+    else:
+        print(False)
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    dataTest()
+    isEven()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
