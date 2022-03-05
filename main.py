@@ -604,6 +604,8 @@ def topView(root):
         print(dict[height][0], end=' ')
 
 
+
+
 # Test code
 def testDict():
     dict = {}
