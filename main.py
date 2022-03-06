@@ -638,6 +638,28 @@ def insert(self, val):
             cur = cur.right
 
 
+def decodeHuff(root, s):
+    temp = root
+    result = []
+
+    for char in s:
+        if char is '0':
+            temp = temp.left
+        else:
+            temp = temp.right
+
+        if temp.left is None and temp.right is None:
+            result.append(temp.data)
+            temp = root
+
+    print("".join(result))
+
+
+
+
+
+
+
 # Test code
 def testDict():
     dict = {}
