@@ -617,6 +617,27 @@ def levelOrder(root):
         if root.right: q.append(root.right)
 
 
+def insert(self, val):
+    # newnode = Node(val)
+    newnode = val
+    if self.root is None:
+        self.root = newnode
+        return
+    cur = self.root
+
+    while cur:
+        if val < cur.info:
+            if cur.left is None:
+                cur.left = newnode
+                return
+            cur = cur.left
+        else:
+            if cur.right is None:
+                cur.right = newnode
+                return
+            cur = cur.right
+
+
 # Test code
 def testDict():
     dict = {}
